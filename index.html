@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exam JS</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="application/javascript"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script src="main.js" type="application/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrapper">
+    <div class="top">
+      <img src="images/logo.png" alt="logo">
+      <ul class="menu">
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#news">news</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+
+      <div class="icons">
+        <a href="#">
+          <div class="circle"><img src="images/icon-1.svg" alt="icon"></div>
+        </a>
+        <a href="#">
+          <div class="circle"><img src="images/icon-2.svg" alt="icon" class="inst"></div>
+        </a>
+        <a href="#">
+          <div class="circle"><img src="images/icon-3.svg" alt="icon"></div>
+        </a>
+      </div>
+
+    </div>
+    <div class="mrg-text">
+      <h1>Simple & mordern</h1>
+      <h3>We make the world's beautiful every day</h3>
+    </div>
+    <button type="button" class="scroll" onclick="bottomFunction()"><img src="images/arrow.svg" alt="arrow"></button>
+    <script>
+        function bottomFunction() {
+            var element = document.querySelector("footer");
+            element.scrollIntoView({behavior: "smooth"});
+        }
+
+    </script>
+  </div>
+</header>
+<section class="gallery" id="gallery">
+  <div class="wrapper">
+    <h2>gallery</h2>
+    <div class="container">
+      <div class="cell no-mrg"><img src="images/picture.png" alt="pic"></div>
+      <div class="cell">
+        <div class="row">
+          <div class="cell"><img src="images/picture-2.png" alt="pic"></div>
+          <div class="cell"><img src="images/picture-3.png" alt="pic"></div>
+        </div>
+        <div class="row">
+          <div class="cell"><img src="images/picture-4.png" alt="pic"></div>
+          <div class="cell"><img src="images/picture-5.png" alt="pic"></div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="see-more">see more</button>
+  </div>
+</section>
+<section class="news" id="news">
+  <div class="wrapper">
+    <h2>latest news</h2>
+    <div class="slider-container">
+      <div>
+        <img src="images/news-1.png" alt="picture">
+      </div>
+      <div>
+        <img src="images/news-2.png" alt="picture">
+      </div>
+      <div>
+        <img src="images/news-3.png" alt="picture">
+      </div>
+      <div>
+        <img src="images/news-1.png" alt="picture">
+      </div>
+      <div>
+        <img src="images/news-2.png" alt="picture">
+      </div>
+      <div>
+        <img src="images/news-3.png" alt="picture">
+      </div>
+    </div>
+    <script>
+        jQuery('.slider-container').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            dots: true
+        });
+    </script>
+  </div>
+</section>
+<section class="map-box">
+  <div class="wrapper">
+    <div id="map"></div>
+    <script>
+        function showMap(coordinates, infoContent) {
+            var point ={lat: 49.988906, lng: 36.232727};
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 11, center: point});
+        }
+
+    </script>
+  </div>
+</section>
+<footer></footer>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?callback=showMap">
+</script>
+</body>
+</html>

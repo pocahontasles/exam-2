@@ -6,18 +6,19 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="application/javascript"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <script src="main.js" type="application/javascript"></script>
+  <script async src="main.js" type="application/javascript"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
-<header>
+<header id="header">
   <div class="wrapper">
     <div class="top">
-      <img src="images/logo.png" alt="logo">
+      <a class="logo" href="#"><img src="images/logo.png" alt="logo"></a>
       <ul class="menu">
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#news">news</a></li>
-        <li><a href="#">contact</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
 
       <div class="icons">
@@ -25,7 +26,7 @@
           <div class="circle"><img src="images/icon-1.svg" alt="icon"></div>
         </a>
         <a href="#">
-          <div class="circle"><img src="images/icon-2.svg" alt="icon" class="inst"></div>
+          <div class="circle"><img src="images/icon-2.svg" alt="icon"></div>
         </a>
         <a href="#">
           <div class="circle"><img src="images/icon-3.svg" alt="icon"></div>
@@ -37,14 +38,8 @@
       <h1>Simple & mordern</h1>
       <h3>We make the world's beautiful every day</h3>
     </div>
-    <button type="button" class="scroll" onclick="bottomFunction()"><img src="images/arrow.svg" alt="arrow"></button>
-    <script>
-        function bottomFunction() {
-            var element = document.querySelector("footer");
-            element.scrollIntoView({behavior: "smooth"});
-        }
+    <button type="button" class="scroll" onclick="bottomFunction()"></button>
 
-    </script>
   </div>
 </header>
 <section class="gallery" id="gallery">
@@ -70,50 +65,135 @@
   <div class="wrapper">
     <h2>latest news</h2>
     <div class="slider-container">
-      <div>
+      <div class="slider-item">
         <img src="images/news-1.png" alt="picture">
+        <div class="btm-text">
+          <h4>See The Unmatched Beauty Of The Great. Lakes.</h4>
+          <p>Free directories: directories are perfect for customers that are... </p>
+          <div class="author">
+            <img src="images/person-1.png" alt="person">
+            <div>
+              <h5>Isaac Dunn</h5>
+              <span>09 Feb 2017</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
+      <div class="slider-item">
         <img src="images/news-2.png" alt="picture">
+        <div class="btm-text">
+          <h4>Effective Advertising Pointers.</h4>
+          <p>Having a home based business is a wonderful asset to your life. </p>
+          <div class="author">
+            <img src="images/person-2.png" alt="person">
+            <div>
+              <h5>Dominic Freeman</h5>
+              <span>24 Apr 2017</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
+      <div class="slider-item">
         <img src="images/news-3.png" alt="picture">
+        <div class="btm-text">
+          <h4>Hypnotize Yourself Into The Ghost. Of Christmas Future</h4>
+          <p>There are many things that are important to catalog design.... </p>
+          <div class="author">
+            <img src="images/person-3.png" alt="person">
+            <div>
+              <h5>Alice Ward</h5>
+              <span>30 Dec 2017</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
+      <div class="slider-item">
         <img src="images/news-1.png" alt="picture">
+        <div class="btm-text">
+          <h4>See The Unmatched Beauty Of The Great. Lakes.</h4>
+          <p>Free directories: directories are perfect for customers that are... </p>
+          <div class="author">
+            <img src="images/person-1.png" alt="person">
+            <div>
+              <h5>Isaac Dunn</h5>
+              <span>09 Feb 2017</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
+      <div class="slider-item">
         <img src="images/news-2.png" alt="picture">
+        <div class="btm-text">
+          <h4>Effective Advertising Pointers.</h4>
+          <p>Having a home based business is a wonderful asset to your life. </p>
+          <div class="author">
+            <img src="images/person-2.png" alt="person">
+            <div>
+              <h5>Dominic Freeman</h5>
+              <span>24 Apr 2017</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
+      <div class="slider-item">
         <img src="images/news-3.png" alt="picture">
+        <div class="btm-text">
+          <h4>Hypnotize Yourself Into The Ghost. Of Christmas Future</h4>
+          <p>There are many things that are important to catalog design.... </p>
+          <div class="author">
+            <img src="images/person-3.png" alt="person">
+            <div>
+              <h5>Alice Ward</h5>
+              <span>30 Dec 2017</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <script>
-        jQuery('.slider-container').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 4000,
-            dots: true
-        });
-    </script>
   </div>
+
+
 </section>
 <section class="map-box">
-  <div class="wrapper">
-    <div id="map"></div>
-    <script>
-        function showMap(coordinates, infoContent) {
-            var point ={lat: 49.988906, lng: 36.232727};
-            var map = new google.maps.Map(
-                document.getElementById('map'), {zoom: 11, center: point});
-        }
-
-    </script>
-  </div>
+  <div id="map"></div>
 </section>
-<footer></footer>
+<footer>
+  <div class="wrapper-f">
+    <div id="contact">
+      <h2>get in touch</h2>
+      <div class="flex-contact">
+        <div class="info">
+          <p><i class="fas fa-map-marker-alt"></i> 91 Nolan Extensions Suite 670</p>
+          <p><i class="fas fa-phone"></i>+001 356-868-2454</p>
+          <p><i class="fas fa-inbox"></i> gahuy93@gmail.com</p>
+          <p><i class="far fa-clock"></i>From 07:05AM to 19:30PM</p>
+        </div>
+        <form>
+          <input type="text" name="name" placeholder="Molie Medina">
+          <input type="email" name="email" placeholder="Email">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="flex-footer">
+      <a href="#header"><img src="images/logo.png" alt="logo"></a>
+      <div class="icons">
+        <a href="#">
+          <div class="circle"><img src="images/icon-1.svg" alt="icon"></div>
+        </a>
+        <a href="#">
+          <div class="circle"><img src="images/icon-2.svg" alt="icon" class="inst"></div>
+        </a>
+        <a href="#">
+          <div class="circle"><img src="images/icon-3.svg" alt="icon"></div>
+        </a>
+      </div>
+    </div>
+    <h6>Copyrights © 2017 Monticello Group</h6>
+    <h6> | </h6>
+    <h6>Made with ❤ by Ga Huy</h6>
+  </div>
+</footer>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?callback=showMap">
 </script>
